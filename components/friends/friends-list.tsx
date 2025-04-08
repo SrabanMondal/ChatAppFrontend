@@ -54,7 +54,8 @@ export function FriendsList({token}:{token:string}) {
     const handleNewMessageNotification=(data:Message)=>{
       //console.log("Received new message notification");
       //console.log(data);
-      if(selectedFriend?.id!=data.senderId){
+      //console.log(selectedFriend)
+      if(!selectedFriend || selectedFriend?.id!=data.senderId){
         toast.success(<CustomToast message={data} />, {icon: false});
         return;
       }
@@ -90,7 +91,7 @@ export function FriendsList({token}:{token:string}) {
       socket.off('roomJoined',handleRoomJoined)
       socket.off('newMessageNotification',handleNewMessageNotification)
     }
-  }, [connect, isConnected, userId])
+  }, [connect, isConnected, userId, selectedFriend])
 
   useEffect(() => {
     // In a real app, you would fetch friends from your API
