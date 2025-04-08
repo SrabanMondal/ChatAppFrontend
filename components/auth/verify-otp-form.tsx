@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { verifyOtp, forgotPassword, resetPassword } from "@/lib/apis/user";
 
 interface Props {
-  flow: "register" | "forgot";
+  flow: string
 }
 
 export function VerifyOtpForm({ flow }: Props) {

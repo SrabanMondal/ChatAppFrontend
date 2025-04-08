@@ -97,7 +97,7 @@ export function LoginForm() {
           <span className="w-full border-t" />
         </div>
       </div>
-      <Link className="text-center text-sm hover:underline" href={'/auth/verify?flow=forgot'}>
+      <Link className="text-center text-sm hover:underline" href={'/auth/verify/forgot'}>
       Forget Password?
       </Link>
       <div className="text-center text-sm">

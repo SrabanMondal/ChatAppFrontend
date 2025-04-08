@@ -84,7 +84,7 @@ export function ChatWindow({ friend, userId, onClose, onlineIds }: ChatWindowPro
     const handleChatHistory = (history: Message[]) => {
       //console.log(`Event 'chatHistory': Received history for room ${roomId} (${history?.length || 0} messages)`);
       setMessages(history || []);
-      if (history && history.length > 0 && roomId) {
+      if (history && history?.length > 0 && roomId) {
         history.forEach((msg) => {
           if (msg.senderId === friend.id && msg._id && msg.status !== "seen") {
             //console.log(`ChatWindow: Marking historical message as read on load: ${msg._id}`);
@@ -237,7 +237,7 @@ export function ChatWindow({ friend, userId, onClose, onlineIds }: ChatWindowPro
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMessageInput(e.target.value);
-    handleTypingChange(e.target.value.length > 0);
+    handleTypingChange(e.target.value?.length > 0);
   };
 
   return (

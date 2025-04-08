@@ -50,7 +50,7 @@ export function RegisterForm() {
       //console.log(values)
       const response = await registerUser({username: values.name, email: values.email, password: values.password})
       if(response && response.status){
-        router.push("/auth/verify")
+        router.push("/auth/verify/register")
       }
       else{
         seterror('Error registering user')
