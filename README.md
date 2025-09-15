@@ -83,7 +83,7 @@ This frontend brings the backend’s powerful features to life with a user-frien
 ### Steps
 1. **Clone the Repository**:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/SrabanMondal/ChatAppFrontend
    cd chat-frontend
    ```
 
