@@ -95,8 +95,9 @@ This frontend brings the backend’s powerful features to life with a user-frien
 3. **Environment Configuration**:
    Create `.env.local` in the root:
    ```bash
-   NEXT_PUBLIC_API_URL=http://localhost:3000
-   NEXT_PUBLIC_WS_URL=ws://localhost:3000
+   NEXT_PUBLIC_API_BASE_URL= <backend-url>
+   JWT_SECRET = <your secret>
+   NEXT_PUBLIC_SOCKET_URL= <socket url - wss://...>
    ```
 
 4. **Run the Application**:
